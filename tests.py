@@ -25,6 +25,11 @@ def test_01():
         query = file.read()
     assert pd.read_sql_query(query, conn).to_dict() == {"SUM(c12)": {0: 15137.63}}
 
+# def prueba():
+#     conn, _ = load_data()
+#     return conn.execute("SELECT SUM(c12) FROM tbl1;").fetchall()
+
+# print(prueba())
 
 def test_02():
     conn, _ = load_data()
@@ -304,21 +309,21 @@ def test_14():
     }
 
 
-test = {
-    "01": test_01,
-    "02": test_02,
-    "03": test_03,
-    "04": test_04,
-    "05": test_05,
-    "06": test_06,
-    "07": test_07,
-    "08": test_08,
-    "09": test_09,
-    "10": test_10,
-    "11": test_11,
-    "12": test_12,
-    "13": test_13,
-    "14": test_14,
-}[sys.argv[1]]
+# test = {
+#     "01": test_01,
+#     "02": test_02,
+#     "03": test_03,
+#     "04": test_04,
+#     "05": test_05,
+#     "06": test_06,
+#     "07": test_07,
+#     "08": test_08,
+#     "09": test_09,
+#     "10": test_10,
+#     "11": test_11,
+#     "12": test_12,
+#     "13": test_13,
+#     "14": test_14,
+# }[sys.argv[1]]
 
-test()
+# test()
