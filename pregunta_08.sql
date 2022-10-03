@@ -41,3 +41,4 @@
 --
 --  >>> Escriba su codigo a partir de este punto <<<
 --
+SELECT c23, AVG(c21) FROM tbl2 GROUP BY SUBS(c23, 1, 4);
