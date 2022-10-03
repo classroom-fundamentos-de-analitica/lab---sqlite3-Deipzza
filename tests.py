@@ -25,11 +25,6 @@ def test_01():
         query = file.read()
     assert pd.read_sql_query(query, conn).to_dict() == {"SUM(c12)": {0: 15137.63}}
 
-# def prueba():
-#     conn, _ = load_data()
-#     return conn.execute("SELECT SUM(c12) FROM tbl1;").fetchall()
-
-# print(prueba())
 
 def test_02():
     conn, _ = load_data()

@@ -97,4 +97,3 @@ def test_14():
         query = file.read()
     return pd.read_sql_query(query, conn)
 
-print(test_14())
